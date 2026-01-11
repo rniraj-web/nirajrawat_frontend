@@ -14,3 +14,6 @@ The React Compiler is not enabled on this template because of its impact on dev 
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+added the globals.css file to the main.jsx so that styles are added to the sub components and can we reused throughout.
+created the components so that we can made changes to the required components, without effecting other changes and easy for the maintaining, understanding the flow of the code.
