@@ -17,3 +17,4 @@ If you are developing a production application, we recommend using TypeScript wi
 
 added the globals.css file to the main.jsx so that styles are added to the sub components and can we reused throughout.
 created the components so that we can made changes to the required components, without effecting other changes and easy for the maintaining, understanding the flow of the code.
+updated the App.jsx with the structure of the page with all the components
