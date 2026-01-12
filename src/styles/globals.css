@@ -49,6 +49,10 @@ body {
   text-decoration: none;
 }
 
+.topbar-link:hover {
+  color: var(--light-color);
+}
+
 .topbar svg {
   font-size: 1.2rem;
 }

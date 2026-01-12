@@ -1,8 +1,29 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { BiOutline } from "react-icons/bi";
 import { MdTextIncrease } from "react-icons/md";
 
 const TopBar = () => {
+  const [increaseSize, setIncreaseSize] = useState(false);
+  const sizeRef = useRef(null);
+
+  useEffect(() => {
+    const root = document.documentElement;
+
+    if (sizeRef.current === null) {
+      const sizeChange = window.getComputedStyle(root).fontSize;
+      sizeRef.current = parseFloat(sizeChange);
+    }
+
+    const actualSize = sizeRef.current;
+    root.style.fontSize = increaseSize
+      ? `${actualSize + 5}px`
+      : `${actualSize}px`;
+
+    return () => {
+      root.style.fontSize = `${actualSize}`;
+    };
+  }, [increaseSize]);
+
   return (
     <div className="topbar">
       <div className="container-fluid d-flex align-items-center justify-content-between py-2">
@@ -10,10 +31,15 @@ const TopBar = () => {
           <p className="accessibility">
             <BiOutline /> Accessibility on our website
           </p>
-          <a href="" className="topbar-link">
+          <button
+            type="button"
+            className="topbar-link btn btn-link p-0"
+            onClick={() => setIncreaseSize((p) => !p)}
+          >
             <MdTextIncrease />
-            Increase text size
-          </a>
+            {increaseSize ? "Decrease text size" : "Increase text size"}
+            {/* Increase text size */}
+          </button>
         </div>
 
         <div className="d-flex gap-2">
