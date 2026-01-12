@@ -8,9 +8,7 @@ export default function App() {
     <div className="min-vh-100 register-page">
       <TopBar />
       <NavBar />
-      <main className="body-container">
-        <RegisterMain />
-      </main>
+      <RegisterMain />
     </div>
   );
 }

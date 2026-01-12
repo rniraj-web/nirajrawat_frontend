@@ -6,7 +6,7 @@ const TopBar = () => {
   return (
     <div className="topbar">
       <div className="container-fluid d-flex align-items-center justify-content-between py-2">
-        <div className="d-flex flex-wrap gap-3 align-items-center">
+        <div className="d-flex flex-wrap gap-3 align-items-center topbar-left">
           <p className="accessibility">
             <BiOutline /> Accessibility on our website
           </p>
